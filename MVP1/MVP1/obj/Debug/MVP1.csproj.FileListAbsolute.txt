@@ -19,3 +19,12 @@ E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\MVP1.csproj.CopyComplete
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\MVP1.exe
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\MVP1.pdb
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\MVP1.Migrations.Initial.resources
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Microsoft.Xaml.Behaviors.dll
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.dll
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.Wpf.dll
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Microsoft.Xaml.Behaviors.xml
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.pdb
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.xml
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.Wpf.pdb
+E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.Wpf.xml

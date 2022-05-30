@@ -14,6 +14,5 @@ namespace MVP1
         public RestaurantDbContext() : base("RestaurantDbContext")
         {
         }
-
     }
 }

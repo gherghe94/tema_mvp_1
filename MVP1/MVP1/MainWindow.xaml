@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVP1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Login" Height="250" Width="600">
+    <DockPanel LastChildFill="True">
+        <DockPanel DockPanel.Dock="Top" Margin="10">
+            <TextBlock Text="User" Margin="10"/>
+            <TextBox Text="{Binding Username}" Margin="10"/>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Top" Margin="10">
+            <TextBlock Text="Pin " Margin="10"/>
+            <TextBox Text="{Binding Pin}" Margin="10"/>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Top" Margin="10">
+            <Button Command="{Binding LoginCommand}" Margin="10"
+                    Content="LOGIN"/>
+        </DockPanel>
+    </DockPanel>
 </Window>
