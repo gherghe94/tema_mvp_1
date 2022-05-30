@@ -63,7 +63,10 @@ namespace MVP1.ViewModel
                 };
 
                 adminWindow.ShowDialog();
+                return;
             }
+
+            // OPEN Waiter window
         }
     }
 }

@@ -18,6 +18,15 @@ namespace MVP1.DataLayer
             return _ctx.Employees.ToList();
         }
 
+
+        public List<Employee> GetAllWaiters()
+        {
+            var waiterType = Enums.EmployeeType.Waiter.ToString();
+            return _ctx.Employees
+                .Where(e=>e.Type == waiterType)
+                .ToList();
+        }
+
         public Employee GetEmployeeByNameAndPin(string name, string pin)
         {
             return _ctx.Employees.

@@ -30,3 +30,5 @@ E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.Wpf.pdb
 E:\Paul\tema_mvp_1\MVP1\MVP1\bin\Debug\Prism.Wpf.xml
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\AdminWindow.g.cs
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\AdminWindow.baml
+E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\ManageEmployeeWindow.g.cs
+E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\ManageEmployeeWindow.baml
