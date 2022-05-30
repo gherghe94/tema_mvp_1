@@ -32,5 +32,27 @@ namespace MVP1.DataLayer
             return _ctx.Employees.
                 FirstOrDefault(e => e.Name == name && e.Pin == pin);
         }
+
+        public void Add(Employee employee)
+        {
+            _ctx.Employees.Add(employee);
+            _ctx.SaveChanges();
+        }
+
+        public void Update(Employee employee)
+        {
+            _ctx.Entry(employee).State = System.Data.Entity.EntityState.Modified;
+            _ctx.SaveChanges();
+        }
+
+        public void RemoveAt(long id)
+        {
+            var x = _ctx.Employees.Find(id);
+            if(x != null)
+            {
+                _ctx.Employees.Remove(x);
+                _ctx.SaveChanges();
+            }
+        }
     }
 }

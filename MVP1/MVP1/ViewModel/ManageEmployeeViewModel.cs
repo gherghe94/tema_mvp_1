@@ -1,5 +1,6 @@
 ﻿using MVP1.DataLayer;
 using MVP1.Model;
+using MVP1.Views;
 using Prism.Commands;
 using Prism.Mvvm;
 using System.Collections.Generic;
@@ -50,11 +51,16 @@ namespace MVP1.ViewModel
 
         public ManageEmployeeViewModel()
         {
-            Employees = new ObservableCollection<EmployeeViewModel>(GetAllEmployees());
+            RefreshEmployees();
 
             AddCommand = new DelegateCommand(Add);
             EditCommand = new DelegateCommand(Edit);
             RemoveCommand = new DelegateCommand(Remove);
+        }
+
+        private void RefreshEmployees()
+        {
+            Employees = new ObservableCollection<EmployeeViewModel>(GetAllEmployees());
         }
 
         private void Remove()
@@ -64,6 +70,11 @@ namespace MVP1.ViewModel
                 return;
             }
 
+            var dbContext = new RestaurantDbContext();
+            var employeeRepository = new EmployeeRepository(dbContext);
+            employeeRepository.RemoveAt(SelectedEmployee.Id);
+
+            RefreshEmployees();
         }
 
         private void Edit()
@@ -73,11 +84,24 @@ namespace MVP1.ViewModel
                 return;
             }
 
+            var window = new UpsertEmployeeWindow();
+            var dataContext = new UpsertEmployeeViewModel(SelectedEmployee, window);
+            window.DataContext = dataContext;
+
+            window.ShowDialog();
+
+            RefreshEmployees();
         }
 
         private void Add()
         {
-            // pop up a new window
+            var window = new UpsertEmployeeWindow();
+            var dataContext = new UpsertEmployeeViewModel(null, window);
+            window.DataContext = dataContext;
+
+            window.ShowDialog();
+
+            RefreshEmployees();
         }
 
         private List<EmployeeViewModel> GetAllEmployees()

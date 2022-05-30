@@ -32,3 +32,5 @@ E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\AdminWindow.g.cs
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\AdminWindow.baml
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\ManageEmployeeWindow.g.cs
 E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\ManageEmployeeWindow.baml
+E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\UpsertEmployeeWindow.g.cs
+E:\Paul\tema_mvp_1\MVP1\MVP1\obj\Debug\Views\UpsertEmployeeWindow.baml
