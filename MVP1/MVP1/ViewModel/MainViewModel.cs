@@ -1,4 +1,5 @@
 ﻿using MVP1.DataLayer;
+using MVP1.Views;
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
@@ -45,11 +46,23 @@ namespace MVP1.ViewModel
             if (employee == null)
             {
                 MessageBox.Show("Credentiale invalide!");
+                return;
             }
-            else
+         
+            MessageBox.Show($"Buna {employee.Name}!");
+            OpenWindow(employee);
+        }
+
+        private void OpenWindow(Model.Employee employee)
+        {
+            if (employee.Type == Enums.EmployeeType.Admin.ToString())
             {
-                MessageBox.Show($"Buna {employee.Name}!");
-                // deschizi alta fereastra
+                var adminWindow = new AdminWindow
+                {
+                    DataContext = new AdminViewModel()
+                };
+
+                adminWindow.ShowDialog();
             }
         }
     }
