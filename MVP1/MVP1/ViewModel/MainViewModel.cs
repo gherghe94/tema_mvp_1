@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using MVP1.DataLayer;
+using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Windows;
@@ -12,10 +13,10 @@ namespace MVP1.ViewModel
         private string _pin;
         private ICommand _loginCommand;
 
-        public string Username 
-        { 
-            get => _username; 
-            set => SetProperty(ref _username, value); 
+        public string Username
+        {
+            get => _username;
+            set => SetProperty(ref _username, value);
         }
 
         public string Pin
@@ -37,7 +38,19 @@ namespace MVP1.ViewModel
 
         private void Login()
         {
-            MessageBox.Show("Sal");
+            var dbContext = new RestaurantDbContext();
+            var employeeRepository = new EmployeeRepository(dbContext);
+
+            var employee = employeeRepository.GetEmployeeByNameAndPin(Username, Pin);
+            if (employee == null)
+            {
+                MessageBox.Show("Credentiale invalide!");
+            }
+            else
+            {
+                MessageBox.Show($"Buna {employee.Name}!");
+                // deschizi alta fereastra
+            }
         }
     }
 }
